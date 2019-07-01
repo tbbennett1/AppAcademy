@@ -233,3 +233,13 @@ def permutations(arr)
   end
 
 end
+
+
+#Fib_sum 
+def fib_sum(n, fibs = [1,1])
+  return n if n <= 2
+  return fibs.sum if fibs.length == n  
+  next_num = fibs[-1] + fibs[-2]
+  next_fibs = fibs << next_num
+  fib_sum(n, next_fibs)
+end
