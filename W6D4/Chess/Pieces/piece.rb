@@ -3,12 +3,37 @@
 class Piece
     attr_accessor :color
 
-    def initialize(color = nil)
+    def initialize(color = nil, board)
         @color = color
-        # @board = Board.new
+        @board = board
+        @pos = []
     end
 
     def to_s
       " #{symbol} "
     end
-end
+
+    def empty?
+
+    end
+    
+    def valid_moves
+      
+    end
+    
+    def pos=(val)
+      @pos = val
+    end
+
+    def symbol
+
+    end 
+
+    private
+
+    def move_into_check?(end_pos)
+
+    end
+
+
+  end
