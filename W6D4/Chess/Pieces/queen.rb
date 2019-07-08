@@ -1,18 +1,16 @@
 require_relative "piece"
+require_relative "slideable"
 
 class Queen < Piece
+  include Slideable
 
-    # def symbol
-    #     @symbol = "♕"
-    # end
+  def symbol
+  '♛'.colorize(color)
+  end
 
-    def symbol
-    '♛'.colorize(color)
-    end
+  protected
 
-    protected
-
-    def move_dirs
-
-    end
+  def move_dirs
+    horizontal_and_vertical_dirs + diagonal_dirs
+  end
 end

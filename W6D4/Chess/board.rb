@@ -1,90 +1,129 @@
-require "byebug"
-require_relative "pieces"
+require_relative 'pieces'
 
 class Board
-    attr_reader :rows
+  attr_reader :rows
 
-    def initialize
-        # @nullpiece = NullPiece.instance
-        board_setup
+  def initialize(fill_board = true)
+    @sentinel = NullPiece.instance
+    make_starting_grid(fill_board)
+  end
+
+  def [](pos)
+    raise 'invalid pos' unless valid_pos?(pos)
+
+    row, col = pos
+    @rows[row][col]
+  end
+
+  def []=(pos, piece)
+    raise 'invalid pos' unless valid_pos?(pos)
+
+    row, col = pos
+    @rows[row][col] = piece
+  end
+
+  def add_piece(piece, pos)
+    raise 'position not empty' unless empty?(pos)
+
+    self[pos] = piece
+  end
+
+  def checkmate?(color)
+    return false unless in_check?(color)
+
+    pieces.select { |p| p.color == color }.all? do |piece|
+      piece.valid_moves.empty?
+    end
+  end
+
+  def dup
+    new_board = Board.new(false)
+
+    pieces.each do |piece|
+      piece.class.new(piece.color, new_board, piece.pos)
     end
 
-    def board_setup
-        @rows = Array.new(8) {Array.new(8, NullPiece.instance)}
-        @rows.each_with_index {|piece, i| @rows[1][i] = Pawn.new(:black)}
-        @rows.each_with_index {|piece, i| @rows[6][i] = Pawn.new(:white)}
-        blackpiece_arr = [Rook.new, Knight.new, Bishop.new, Queen.new, King.new, Bishop.new, Knight.new, Rook.new]
-        whitepiece_arr = [Rook.new, Knight.new, Bishop.new, Queen.new, King.new, Bishop.new, Knight.new, Rook.new]
-        blackpiece_arr.each_with_index do |piece, i|
-            piece.color = :black
-            @rows[0][i] = piece
-        end
-        whitepiece_arr.each_with_index do |piece, i|
-            piece.color = :white
-            @rows[7][i] = piece
-        end
+    new_board
+  end
+
+  def empty?(pos)
+    self[pos].empty?
+  end
+
+  def in_check?(color)
+    king_pos = find_king(color).pos
+    pieces.any? do |p|
+      p.color != color && p.moves.include?(king_pos)
+    end
+  end
+
+  def move_piece(turn_color, start_pos, end_pos)
+    raise 'start position is empty' if empty?(start_pos)
+
+    piece = self[start_pos]
+    if piece.color != turn_color
+      raise 'You must move your own piece'
+    elsif !piece.moves.include?(end_pos)
+      raise 'Piece does not move like that'
+    elsif !piece.valid_moves.include?(end_pos)
+      raise 'You cannot move into check'
     end
 
-    def [](pos)                 #pos => [0,1]   board = Board.new  board[pos]
-        row, col = pos
-        @rows[row][col]
+    move_piece!(start_pos, end_pos)
+  end
+
+  # move without performing checks
+  def move_piece!(start_pos, end_pos)
+    piece = self[start_pos]
+    raise 'piece cannot move like that' unless piece.moves.include?(end_pos)
+
+    self[end_pos] = piece
+    self[start_pos] = sentinel
+    piece.pos = end_pos
+
+    nil
+  end
+
+  def pieces
+    @rows.flatten.reject(&:empty?)
+  end
+
+  def valid_pos?(pos)
+    pos.all? { |coord| coord.between?(0, 7) }
+  end
+
+  private
+
+  attr_reader :sentinel
+
+  def fill_back_row(color)
+    back_pieces = [
+      Rook, Knight, Bishop, Queen, King, Bishop, Knight, Rook
+    ]
+
+    i = color == :white ? 7 : 0
+    back_pieces.each_with_index do |piece_class, j|
+      piece_class.new(color, self, [i, j])
     end
+  end
 
-    def []=(pos, val)  
-        row, col = pos
-        @rows[row][col] = val
+  def fill_pawns_row(color)
+    i = color == :white ? 6 : 1
+    8.times { |j| Pawn.new(color, self, [i, j]) }
+  end
+
+  def find_king(color)
+    king_pos = pieces.find { |p| p.color == color && p.is_a?(King) }
+    king_pos || (raise 'king not found?')
+  end
+
+  def make_starting_grid(fill_board)
+    @rows = Array.new(8) { Array.new(8, sentinel) }
+    return unless fill_board
+    %i(white black).each do |color|
+      fill_back_row(color)
+      fill_pawns_row(color)
     end
+  end
 
-    def move_piece(color, start_pos, end_pos)
-        piece = self[start_pos]
-        if piece == nil
-            raise "There isn't a piece there Chief!"
-        elsif !piece.valid_moves.include?(end_pos)   #valid moves array???
-            raise "You can't move there Chief!"
-        else  
-            self[end_pos] = piece 
-        end
-    end
-
-    def valid_pos?(pos)
-
-    end
-
-    def add_piece(piece, pos)
-
-    end
-
-    def checkmate?(color)
-
-    end
-
-    def in_check?(color)
-
-    end
-
-    def find_king(color)
-
-    end
-
-    def pieces
-
-    end
-
-    def dup
-
-    end
-
-    def move_piece!(color, start_pos, end_pos)
-
-    end
-
-    def inspect
-        @value = value
-    end
-
-    private
-
-    def sentinal
-        @sentinal = NullPiece
-    end
 end

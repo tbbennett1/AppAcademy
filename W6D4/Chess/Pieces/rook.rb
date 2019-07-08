@@ -1,5 +1,4 @@
 require_relative 'piece'
-require_relative "slideable"
 require "colorize"
 
 class Rook < Piece
@@ -12,7 +11,7 @@ class Rook < Piece
     protected
 
     def move_dirs
-      horizontal_dirs
+      horizontal_and_vertical_dirs
     end
 end
 
