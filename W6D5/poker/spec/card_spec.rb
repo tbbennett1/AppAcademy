@@ -28,6 +28,5 @@ describe Card do
     it "should be able to get value" do
         expect(card.value).to eq(:three)
     end
-
   end
 end
