@@ -1,0 +1,39 @@
+<% if bleat.persisted? %>
+  <% action = bleat_url(bleat.id) %>
+  <%# method_override = "PUT" %>
+  <% method_override = '<input type="hidden" name="_method" value="PUT">'.html_safe %>
+  <% button_text = "Update the bleat!" %>
+<% else %>
+  <% action = bleats_url %>
+  <%# method_override = "POST" %>
+  <% method_override = "" %>
+  <% button_text = "Create the bleat!" %>
+<% end %>
+
+
+<form action="<%= action %>" method="POST">
+
+  <%= method_override %>
+
+  <%= auth_token %>
+  
+  <ul>
+  <% bleat.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+
+  <label>
+    Body
+    <input type="text" name="bleat[body]" value="<%= bleat.body %>" />
+  </label>
+
+  <label for="bleat-author_id">Author ID</label>
+  <input id="bleat-author_id" 
+    type="number" 
+    name="bleat[author_id]" 
+    value="<%= bleat.author_id %>" />
+
+  <button><%= button_text %></button>
+
+</form>

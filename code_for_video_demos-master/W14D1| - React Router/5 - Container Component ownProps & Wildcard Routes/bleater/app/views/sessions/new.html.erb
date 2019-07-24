@@ -1,0 +1,23 @@
+<main class="login">
+  <h1>Log in!</h1>
+
+  <form action="<%= session_url %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+    <label>
+      Email
+      <input type="email" name="email" />
+      <span class="tooltip">Enter your email pls</span>
+    </label>
+
+    <label>
+      Password
+      <input type="password" name="password" />
+      <span class="tooltip">Password must be length 6+</span> 
+    </label>
+
+    <nav>
+      <a href="<%= new_user_url %>">Create an account</a>
+      <input type="submit" value="Log in!">
+    </nav>
+  </form>
+</main>

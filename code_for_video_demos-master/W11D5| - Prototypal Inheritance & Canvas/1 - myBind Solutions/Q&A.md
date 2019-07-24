@@ -1,0 +1,1 @@
+1. Cover `arguments` how to get all args except context from args list

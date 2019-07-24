@@ -1,0 +1,12 @@
+<h1><%= @bleat.author.email %></h1>
+
+<p><%= @bleat.body %></p>
+
+<a href="<%= bleats_url %>">Back to index</a> | 
+<% if @bleat.author == current_user %>
+  <a href="<%= edit_bleat_url %>">Edit</a> |
+  <form action="<%= bleat_url(@bleat.id) %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE" />
+    <input type="submit" value="Destroy the bleat!">
+  </form>
+<% end %>

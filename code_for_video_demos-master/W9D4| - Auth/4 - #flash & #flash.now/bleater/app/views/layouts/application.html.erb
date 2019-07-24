@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bleater</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+
+  <body>
+
+    <%= flash[:error] %>
+    <%= flash[:success] %>
+    <%= flash[:notice] %>
+
+    <%= yield %>
+  </body>
+</html>

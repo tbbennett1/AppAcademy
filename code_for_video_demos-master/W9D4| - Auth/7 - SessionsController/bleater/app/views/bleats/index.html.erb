@@ -1,0 +1,16 @@
+<% (1..4).each do |i| %>
+<h<%= i %>>Bleats Index!</h<%= i %>>
+<% end %>
+
+<a href="<%= new_bleat_url %>">Write a new bleat!</a>
+
+<ul>
+  <% @bleats.each do |bleat| %>
+  <li>
+    <%= bleat.author.email %>: 
+    <a href="<%= bleat_url(bleat.id) %>">
+      <%= bleat.body %>
+    </a>
+  </li>
+  <% end %>
+</ul>

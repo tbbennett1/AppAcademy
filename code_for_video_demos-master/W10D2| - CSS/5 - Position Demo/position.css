@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+}
+
+.outer {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: blue;
+}
+
+.inner-1 {
+  width: 200px;
+  height: 200px;
+
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.inner-2 {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+.outer > span {
+  color: green;
+}

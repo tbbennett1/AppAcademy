@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Demo</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./jquery_demo.js"></script>
+</head>
+
+<body>
+  <h1>🤑 jQuery 🤑</h1>
+
+  <article>
+    <section>
+      <h2>ToLearn List</h2>
+      <ul class="todo-list">
+        <li data-whatever="5">selecting elements w/ jQuery</li>
+        <li>wrapping elements w/ jQuery</li>
+        <li>creating HTMLElements w/ jQuery</li>
+        <li>data method</li>
+        <li>event listeners</li>
+        <li>document ready callback</li>
+      </ul>
+      <button id="complete-all" class="button">Complete All!</button>
+    </section>
+
+    <section>
+      <h2>Add a ToLearn</h2>
+      
+      <form class="todo-form" action="index.html" method="POST">
+        <input disabled id="todo-text" type="text" name="todo" placeholder="Todo">
+
+        <input type="submit" value="Submit Todo">
+      </form>
+
+    </section>
+  </article>
+</body>
+
+</html>

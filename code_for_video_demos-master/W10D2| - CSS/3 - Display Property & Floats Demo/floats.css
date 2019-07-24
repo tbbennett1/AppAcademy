@@ -1,0 +1,32 @@
+body {
+  background-color: #2e2b26;
+  margin: 20px;
+}
+
+.app-academy {
+  background-color: whitesmoke;
+}
+
+.app-academy > div {
+  height: 300px;
+  width: 300px;
+  float: left;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.manhattan {
+  background-color: rgba(255, 215, 0, 0.5);
+}
+
+.brooklyn {
+  background-color: rgba(95, 158, 160, 0.5);
+}
+
+.queens {
+  background-color: rgba(178, 34, 34, 0.5);
+}

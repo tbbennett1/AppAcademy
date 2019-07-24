@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bleater</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+
+  <body>
+
+    <% if logged_in? %>
+      Current user email: <%= current_user.email %>
+    <% end %>
+
+    <%= flash[:error] %>
+    <%= flash[:success] %>
+    <%= flash[:notice] %>
+
+    <%= yield %>
+  </body>
+</html>

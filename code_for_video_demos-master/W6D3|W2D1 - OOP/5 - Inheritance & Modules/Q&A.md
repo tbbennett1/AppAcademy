@@ -1,0 +1,2 @@
+1. Demonstrate how the child class has access to the parent class methods, can overwrite those methods, and what `self` references in a parent method
+2. Demonstrate how a module's methods can be overwritten

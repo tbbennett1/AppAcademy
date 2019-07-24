@@ -1,0 +1,24 @@
+<h1>Make a new Bleat!</h1>
+
+<form action="<%= bleats_url %>" method="POST">
+
+  <ul>
+  <% @bleat.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+
+  <label>
+    Body
+    <input type="text" name="bleat[body]" value="<%= @bleat.body %>" />
+  </label>
+
+  <label for="bleat-author_id">Author ID</label>
+  <input id="bleat-author_id" 
+    type="number" 
+    name="bleat[author_id]" 
+    value="<%= @bleat.author_id %>" />
+
+  <button>Create the bleat!</button>
+
+</form>

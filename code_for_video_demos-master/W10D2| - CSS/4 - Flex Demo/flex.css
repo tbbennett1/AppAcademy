@@ -1,0 +1,38 @@
+body {
+  background-color: #2e2b26;
+  margin: 20px;
+}
+
+.app-academy {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: space-around;
+  height: 600px;
+}
+
+.app-academy > div {
+  height: 200px;
+  width: 200px;
+}
+
+.manhattan {
+  height: 300px;
+  background-color: rgba(255, 215, 0, 0.5);
+  order: 5;
+}
+
+.brooklyn {
+  background-color: rgba(95, 158, 160, 0.5);
+  order: -1;
+  flex-grow: 2;
+}
+
+.queens {
+  flex-grow: 1;
+  align-self: flex-end;
+  background-color: rgba(178, 34, 34, 0.5);
+}
