@@ -1,0 +1,16 @@
+<h1>Cats Index!</h1>
+<ul>
+    <% @cats.each do |cat| %>
+    <li>
+        <a href= "<%= cat_url(cat.id) %>">
+        <%= cat.name %>:
+        </a>    
+        <%= cat.description%>
+    </li>
+    <% end  %>
+</ul>
+
+<h3>
+    <a href= "<%= new_cat_url %>">Create a Cat </a>
+<h3>
+

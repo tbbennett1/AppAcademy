@@ -1,0 +1,42 @@
+<h1> Create-a-Cat! </h1>
+
+<form action="<%= cats_url %>" method="POST">
+
+  <label>
+    Name
+    <input type="text" name="name" value="" />
+  </label>
+    <br> 
+    M<input type="radio" name="Sex" value="M">
+    F<input type="radio" name="Sex" value="F">
+    <br> 
+  <select id="cat-color">
+    <option value="">--Please Select A Color--</option>
+    <option value="black">Black</option>
+    <option value="brown">Brown</option>
+    <option value="orange">Orange</option>
+  </select>
+    <br> 
+  <label for="birthday">Birf Day:</label>
+
+  <input type="date" id="birthday"
+       min="1900-01-01" max="2020-12-31">
+    <br> 
+    <label>
+        <textarea name="description" cols="30" rows="10" placeholder="Describe your cat"></textarea>
+    </label>
+    <br>
+    <input type="submit" value="Create Cat">
+  
+</form>
+
+
+
+
+
+  <%# <ul>
+  <% cat.errors.full_messages.each do |msg| %>
+    <%# <li><%= msg</li> %> 
+  <%# <% end %> 
+  <%# </ul> %> 
+
