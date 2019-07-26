@@ -1,0 +1,24 @@
+<h1>Create an Account</h1>
+
+<form action="<%= users_url %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <ul>
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+
+  <label for="user_name">Username</label>
+  <input type="user_name" 
+    name="user[user_name]" 
+    id="user_name" 
+    value="<%= @user.user_name %>" />
+
+  <label>
+    Password
+    <input type="password" name="user[password]" />
+  </label>
+
+  <input type="submit" value="Create my free account!" />
+
+</form>
