@@ -338,3 +338,617 @@ Migrating to CreateComments (20190729223615)
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/session/new" for ::1 at 2019-07-29 15:46:37 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/brockbennett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 189ms (Views: 182.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 15:46:45 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"8d19g7g402M5kFJ03K/HrEzeU0W66+HLfBzql7JPVqeeyZDPCHVEsnF15tm8bjFUybecOHdwanwfMnLpVAtDAg==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kanye@west.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 10ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 15:46:45 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 15:52:37 -0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/brockbennett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 209ms (Views: 200.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 15:52:46 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 15:53:04 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"LBFX/zySXaGX5WZ7BD6FdGdMRD+axY4QSlB/lsNMbAJDBbqzjN/KcN8A0tZk/3OM4iWLQldeBacpfufoJQh5pw==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kanye@west.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 10ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 15:53:04 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-07-29 15:53:07 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 20.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/users?authenticity_token=form_authenticity_token&user%5Bemail%5D=jimmy%40jimbos.com&user%5Bpassword%5D=[FILTERED]" for ::1 at 2019-07-29 15:53:21 -0700
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"form_authenticity_token", "user"=>{"email"=>"jimmy@jimbos.com", "password"=>"[FILTERED]"}}
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?authenticity_token=form_authenticity_token&user%5Bemail%5D=jimmy%40jimbos.com&user%5Bpassword%5D=[FILTERED]" for ::1 at 2019-07-29 15:55:59 -0700
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"form_authenticity_token", "user"=>{"email"=>"jimmy@jimbos.com", "password"=>"[FILTERED]"}}
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 22.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 15:56:02 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 15:56:10 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"uZ7TobbREbR2VXeNkq85eijIOu/QhqaCTpa34q6ZvPrWij7tBpyGZT6wwyDybs+CraH1kh0dLTUtuC+cSN2pXw==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kanye@west.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 15:56:10 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "kanye@west.com"], ["password_digest", "a"], ["session_token", "asdfasd"], ["created_at", "2019-07-29 22:58:34.333365"], ["updated_at", "2019-07-29 22:58:34.333365"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/session/new" for ::1 at 2019-07-29 15:58:48 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 15:58:50 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 15:59:03 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"W7D5GfwNEZw350EQwNrEE+xHDg+YNXEGoyxdG2xOgbU0pBRVTECGTX8C9b2gGzLraS7BclWu+rHAAsVligqUEA==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kanye@west.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/models/user.rb:20:in `new'
+app/models/user.rb:20:in `is_password?'
+app/models/user.rb:11:in `find_by_credentials'
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/session/new" for ::1 at 2019-07-29 16:00:09 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:00:16 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"X7P5Mkmay8weoMtfTvL1Y3hPon/Z2UjlWDblI+bziBAwpxR++ddcHVZFf/IuMwOb/SZtAhRCw1I7GH1dALedtQ==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kanye@west.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 7.1ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/models/user.rb:20:in `new'
+app/models/user.rb:20:in `is_password?'
+app/models/user.rb:11:in `find_by_credentials'
+app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/session/new" for ::1 at 2019-07-29 16:03:48 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:03:58 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eKzI+0gjnYRtZ2X56jYAJWEzNPh5iN1U+3tumtfhCmwXuCW3+G4KVSWC0VSK9/bd5Fr7hbQTVuOYVfbkMaUfyQ==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kanye@west.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/models/user.rb:20:in `new'
+app/models/user.rb:20:in `is_password?'
+app/models/user.rb:11:in `find_by_credentials'
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/session/new" for ::1 at 2019-07-29 16:04:36 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:04:44 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"vG/MyZ3ekY9tL7Lb4lEjCKIn93PxUTwU2GzCJlcSyaTTeyGFLZMGXiXKBnaCkNXwJ044DjzKt6O7QlpYsVbcAQ==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 16:04:44 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:04:56 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"kYiO6c3vUhfKhj678PAX+qWdt9seKiuRGC619cbwuwP+nGOlfaLFxoJjihaQMeECIPR4ptOxoCZ7AC2LILSupg==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 16:04:56 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 16:05:16 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:05:22 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"5W4jKtD6NaooqAQ37RHmK334yHU3s/cdmCIzKuL6+n6Kes5mYLeie2BNsJqN0BDT+JEHCPoofKr7DKtUBL7v2w==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Completed 500 Internal Server Error in 296731ms (ActiveRecord: 2.6ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/session/new" for ::1 at 2019-07-29 16:11:16 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 305ms (Views: 299.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:11:32 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"vD9QW3ba+1RbWq/0KIqEuSJv+vF5aXk+hZv7jKV9KvTTK70XxpdshRO/G1lIS3JBpwY1jLTy8onmtWPyQzk/UQ==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/session/new" for ::1 at 2019-07-29 16:13:28 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 304ms (Views: 291.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:14:03 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eRPVXvRdzUNpcuBVmOnsxS1S2/l+PLmbinGqxIeRO8gWBzgSRBBakiGXVPj4KBo9qDsUhLOnMizpXzK6YdUubQ==", "user"=>{"email"=>"kanye@west.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kanye@west.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 10.9ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/models/user.rb:20:in `new'
+app/models/user.rb:20:in `is_password?'
+app/models/user.rb:11:in `find_by_credentials'
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/session/new" for ::1 at 2019-07-29 16:18:28 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 382ms (Views: 368.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-07-29 16:18:40 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 482ms (Views: 360.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users?authenticity_token=form_authenticity_token&user%5Bemail%5D=tryagain%40hotmail.com&user%5Bpassword%5D=[FILTERED]" for ::1 at 2019-07-29 16:18:56 -0700
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"form_authenticity_token", "user"=>{"email"=>"tryagain@hotmail.com", "password"=>"[FILTERED]"}}
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 370ms (Views: 353.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 16:19:03 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 360ms (Views: 352.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:19:14 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"MxSSSBSLCF+X0/Kz5uzWrOvh3PG2Tz4Nq8wL+6xcWKFcAH8EpMafjt82Rh6GLSBUbogTjHvUtbrI4pOFShhNBA==", "user"=>{"email"=>"tryagain@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tryagain@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 19127ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 16:19:33 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:20:37 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"OWRySUo7V87aagYdLf6n0Ss1iBIhdn6Wwdu7nAJ3yh5WcJ8F+nbAH5KPsrBNP1EprlxHb+zt9SGi9SPi5DPfuw==", "user"=>{"email"=>"tryagain@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tryagain@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tryagain@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 132407ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/session/new" for ::1 at 2019-07-29 16:22:49 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:22:57 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"dWgqsxBTDhBeL7Gc37Wdk225T3+sNBwYw3+Ak082GWIafMf/oB6ZwRbKBTG/dGtr6NCAAmGvl6+gURjtqXIMxw==", "user"=>{"email"=>"tryagain@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tryagain@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/models/user.rb:11
+Completed 500 Internal Server Error in 91877ms (ActiveRecord: 5.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `find_by_credentials'
+app/models/user.rb:11:in `find_by_credentials'
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/session/new" for ::1 at 2019-07-29 16:24:46 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 343ms (Views: 328.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-07-29 16:24:51 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 427ms (Views: 318.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/users?authenticity_token=form_authenticity_token&user%5Bemail%5D=fakeemail%40yahoo.com&user%5Bpassword%5D=[FILTERED]" for ::1 at 2019-07-29 16:25:03 -0700
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"form_authenticity_token", "user"=>{"email"=>"fakeemail@yahoo.com", "password"=>"[FILTERED]"}}
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 377ms (Views: 366.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-07-29 16:26:12 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 324ms (Views: 309.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-07-29 16:26:22 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"form_authenticity_token", "user"=>{"email"=>"tryagain@hotmail.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/session/new" for ::1 at 2019-07-29 16:27:44 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 330ms (Views: 318.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-07-29 16:27:51 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 322ms (Views: 313.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-07-29 16:27:58 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"tEv9vULuipv5iX4I5ctrzeK/fSZ88KbaRtVXSAs785XbXxDx8qMdSrFsyqWFCp01Z9ayW7FrLW0l+8827X/mMA==", "user"=>{"email"=>"tryagain@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "tryagain@hotmail.com"], ["password_digest", "$2a$12$oImTr2662kRJc9RR1DR0H.UT9xN9aVY79OAM5P44nXiVqGLHVcire"], ["session_token", "_ArzDTTnTF7VqD4tP1Vrxg"], ["created_at", "2019-07-29 23:28:15.148269"], ["updated_at", "2019-07-29 23:28:15.148269"]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+Completed 500 Internal Server Error in 16305ms (ActiveRecord: 3.2ms)
+
+
+  
+NoMethodError (undefined method `log_in' for #<UsersController:0x00007fefa6c83f28>
+Did you mean?  login):
+  
+app/controllers/users_controller.rb:22:in `create'
+Started GET "/session/new" for ::1 at 2019-07-29 16:28:45 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:28:54 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"sFwrKTh1CrVmsE0gLOcW4EK/c8W3uJBId13fJjW3BSLfSMZliDidZC5V+Y1MJuAYx9a8uHojG/8Uc0dY0/MQhw==", "user"=>{"email"=>"tryagain@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tryagain@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Completed 500 Internal Server Error in 27652ms (ActiveRecord: 9.6ms)
+
+
+  
+NoMethodError (undefined method `save!' for "o30SR6QwL-15t2UcBfAExQ":String):
+  
+app/models/user.rb:31:in `reset_session_token!'
+app/controllers/application_controller.rb:10:in `login'
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/session/new" for ::1 at 2019-07-29 16:30:36 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2019-07-29 16:30:46 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"oseTxCJRZSShO+QCMVM1lgkGQ3LiGDklVMczhAIL4i/N036Ikhzy9eneUK9RksNujG+MDy+DspI36av65E/3ig==", "user"=>{"email"=>"tryagain@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tryagain@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:29
+  [1m[36mUser Update (7.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "zL1EeATzhE_-W4dvlNbVDA"], ["updated_at", "2019-07-29 23:30:46.302239"], ["id", 2]]
+  ↳ app/models/user.rb:29
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:29
+Redirected to http://localhost:3000/goals
+Completed 302 Found in 261ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/goals" for ::1 at 2019-07-29 16:30:46 -0700
+  
+ActionController::RoutingError (uninitialized constant GoalsController):
+  
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'

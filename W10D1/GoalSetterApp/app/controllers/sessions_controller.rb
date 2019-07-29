@@ -5,14 +5,15 @@ class SessionsController < ApplicationController
     end
 
     def create
-        user = User.find_by_credentials(params[:user][:email], params[:user][:password_digest])
-debugger
+        user = User.find_by_credentials(params[:user][:email], params[:user][:password])
+
         if user
             login(user)
             flash[:success] = "You have logged in."
-            redirect_to new_session_url
+            redirect_to goals_url
         else
-            render json: "You cannot create..."
+            flash.now[:errors] = "Email/Password is incorrect"
+            redirect_to new_session_url
         end
     end
 
