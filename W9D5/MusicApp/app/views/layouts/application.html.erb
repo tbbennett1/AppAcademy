@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <style> 
+    h1 {
+      color: white;
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+    }
+
+
+
+  </style>
+  <body style="background-color:green">
+    <nav class="main-nav">
+    <h1>MusicApp</h1>
+    <div>
+    <% if current_user.nil? %>
+
+      <!-- <a href="<%= new_session_url %>">Sign in</a> -->
+      <a style="background-color:cyan; border-radius:50px;" href="<%= new_user_url %>">Sign up</a>
+    <% else %>
+      <%= current_user.email %>
+      <form action="<%= session_url %>" method="post">
+        <input
+          type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Logout">
+      </form>
+    <% end %>
+    </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

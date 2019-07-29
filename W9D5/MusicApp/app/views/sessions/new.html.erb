@@ -1,0 +1,36 @@
+<style>
+   section h3 {
+     display: flex; 
+     color: orange;
+     justify-content: flex-end;
+
+  }
+
+   section form {
+     display: flex;
+     color: orange;
+     justify-content: flex-end;
+   }
+</style>
+<section>
+  <h3>Sign in</h3>
+
+  <%= render "shared/errors" %>
+
+  <form action="<%= session_url %>" method="post">
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+  <label for="user_email">Email</label>
+  <input type="text" name="user[email]" id="user_email">
+  <br>
+
+  <label for="user_password">Password</label>
+  <input type="password" name="user[password]" id="user_password">
+  <br>
+
+  <input type="submit">
+  </form>
+</section>
