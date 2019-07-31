@@ -1,0 +1,53 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+}
+
+.left-nav > ul,
+.right-nav > ul {
+  display: flex;
+  align-items: baseline;
+}
+
+.left-nav > ul > li {
+  font-family: sans-serif;
+  font-size: 15px;
+  text-transform: capitalize;
+  margin: 5px;
+}
+
+.right-nav > ul > li#gear {
+  font-size: 20px;
+}
+
+.right-nav > ul > li:last-of-type {
+
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+  background-color: gray;
+}
+
+.left-nav span {
+
+}
+
+
+.right-nav i {
+
+}
+
+@media all and (max-width: 900px) {
+  .right-nav {
+    display: none;
+  }
+
+  .left-nav {
+    margin: 5px;
+    padding: 5px;
+  }
+
+}

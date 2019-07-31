@@ -1,0 +1,83 @@
+
+.col-1 {
+  // order: 2;
+  display: flex;
+  padding: 20px 10px;
+  margin: 30px 20px;
+}
+
+
+[class*='col-1-'] {
+  padding: 20px;
+  margin: 10px;
+  width: 33%;
+}
+
+.title-1:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+// .col-1 h1:hover {
+//   text-decoration: underline;
+//   cursor: pointer;
+// }
+
+
+.comment {
+  text-decoration: underline;
+  // 1px solid blue;
+  color: blue;
+}
+
+.col-2 {
+  // order: 0; // about priority, not position
+  // display: flex;
+  padding: 20px;
+  margin: 10px;
+}
+
+div {
+  display: flex;
+}
+
+.first_part {
+  display: flex;
+  justify-content: center;
+}
+.second-part {
+  display: flex;
+}
+
+[class*='col-2-'] {
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+}
+
+@media all and (max-width: 900px) {
+
+  .col-1 {
+    display: flex;
+  }
+
+  .col-2 {
+    display: flex;
+  }
+}
+
+
+
+// @media all and (max-width: 250px) {
+//   [class*='col-'] {
+//     //
+//   }
+// }
+
+/* Attribute selector targeting all elements
+with a class attribute containing 'col-' */
+// [class*='col-1'] {
+
+// [class*='col-']:last-of-type {
+//   padding-right: 0px;
+// }

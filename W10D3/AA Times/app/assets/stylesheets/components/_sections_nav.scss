@@ -1,0 +1,18 @@
+.sections-nav {
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    justify-content: space-around;
+}
+
+.sections-nav li:hover {
+    background-color: grey;
+    border-bottom: 2px solid black
+}
+
+@media all and (max-width: 900px) {
+  .sections-nav {
+    display: none;
+  }
+
+}

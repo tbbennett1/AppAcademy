@@ -1,0 +1,17 @@
+// Use the gear_dropdown.png screenshot as a style guide
+.gear-button  {
+    // position: absolute;
+    background: yellow;
+    font-size: 18px
+}
+
+.gear-dropdown {
+    position: relative;
+    background: cyan;
+    font-size: 18px;
+    
+}
+.gear-dropdown li{
+    text-decoration: underline;
+    font-size: 10px;
+}

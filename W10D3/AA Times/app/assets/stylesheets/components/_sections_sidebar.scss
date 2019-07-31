@@ -1,0 +1,12 @@
+// Use the gear_dropdown.png screenshot as a style guide
+.sections {
+  opacity: 1;
+}
+
+
+@media all and (max-width: 900px) {
+  .sections {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
