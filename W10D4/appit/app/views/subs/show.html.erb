@@ -1,0 +1,35 @@
+subs show
+<a href="<%= subs_url %>">All Subs</a>
+
+<%= @sub.title %>
+<%= @sub.description %>
+
+<ul>
+<% @sub.posts.each do |post| %>
+
+	<li><a href="<%=sub_post_url(@sub, post)%>"><%=post.title%></a></li>
+    <li><%=post.url%></li>
+	<li><%=post.content%></li>
+<% end %>
+</ul>
+
+<h3>Add Post</h3>
+
+<form action="<%=sub_posts_url(@sub)%>" method="post">
+	<input type="hidden" name="authenticity_token"
+	value="<%=form_authenticity_token%>">
+	<label>
+		Post Title
+		<input type="text" name="post[title]" value="">
+	</label>
+	<label>
+		Post Content
+		<input type="text" name="post[content]" value="">
+	</label>
+	<label>
+		URL
+		<input type="text" name="post[url]" value="">
+	</label>
+
+	<input type="submit" name="" value="Add Post">
+</form>

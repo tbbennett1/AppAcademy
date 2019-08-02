@@ -1,0 +1,13 @@
+<h2>The Post</h2>
+
+<ul>
+<%= @post.title %>
+<br>
+<%= @post.content %>
+<br>
+<%= @post.url %>
+<br>
+
+<a href="<%=sub_url(@post.sub.id)%>"><%= @post.sub.title %></a>
+
+</ul>
