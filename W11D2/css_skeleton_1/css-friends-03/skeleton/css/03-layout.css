@@ -1,0 +1,66 @@
+/* PHASE 3: Layout */
+
+.content_group {
+    display: flex;
+    background-color: grey;
+    position: relative;
+    margin: 0 auto;
+    background: #fff;
+    width: 900px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.content_group:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 240px;
+  width: 1px;
+  background: #ccc;
+}
+
+.content-sidebar {
+  float: left;
+  width: 200px;
+  min-height: 200px;
+  padding: 20px;
+  background-color: aquamarine
+}
+
+.content-main {
+  float: left;
+  width: 620px;
+  min-height: 200px;
+  padding: 20px;
+  background-color: beige
+}
+
+
+.footer {
+
+    width: 900px;
+    margin: 0 auto 50px auto;
+    background: #fff;
+    color: #aaa;
+    font-size: 14px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;    
+}
+.footer-copy {
+    display: block;
+    padding: 10px;
+    float: left;
+}
+
+.footer-links {
+    display: flex;
+    padding: 20px;
+    float: right;
+}
