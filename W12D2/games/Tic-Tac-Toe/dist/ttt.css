@@ -1,0 +1,50 @@
+.group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    list-style-type: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   background-color: gray;
+   width: 90px;
+   height: 90px;
+   border: black solid 5px;
+
+
+}
+
+.hover {
+    background-color: yellow;
+   border: green dotted 5px;
+
+}
+
+.x, .o {
+  background-color: aliceblue;
+}
+
+.x:after {
+    display: block;
+    font-size: 60px;
+    line-height: 80px;
+}
+
+.o:after {
+    content: "o";
+    display: block;
+    font-size: 60px;
+    line-height: 80px;
+}
+
+.x:after {
+  content: "x";
+
+}
+.o:after {
+  content: "o";
+
+}
