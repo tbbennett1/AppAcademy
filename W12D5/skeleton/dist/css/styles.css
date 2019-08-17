@@ -1,0 +1,104 @@
+
+html {
+  box-sizing: border-box;
+  background: #A9DBB8;
+  text-align: center;
+}
+
+h1 {
+  color: #F0F2EF;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcome {
+  font-weight: 400;
+  margin-top: 100px;
+}
+
+/*  Phase 4: Slide In & Out Classes */
+
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.align-left.slide {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
+
+.clock-holder {
+  height: 50%;
+  width: 50%;
+  margin: 20px;
+}
+
+#clock {
+  padding: 15px;
+}
+
+/* Phase 2 Dropdown */
+.drop-down-dog-nav {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  margin: 25px 25px;
+  background-color: blue;
+  color: yellow;
+}
+
+.drop-down-dog-nav h3 {
+  padding: 10px;
+}
+
+.dog-link {
+  display: none;
+}
+
+.dog-link.show {
+  display: inline-block;
+}
+
+.drop-down-dog-list {
+  width: 100%;
+  border: 2px solid black;
+  padding: 10px;
+  color: yellow;
+}
+
+/* Phase 3 */
+
+.todos {
+  width: 400px;
+  height: 200px;
+  background: fuschia;
+}
+
+.add-todo-form {
+
+}
