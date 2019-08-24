@@ -1,0 +1,10 @@
+body {
+    background: cornflowerblue;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: bisque;
+    font-family: sans-serif;
+}
