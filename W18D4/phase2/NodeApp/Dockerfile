@@ -19,4 +19,18 @@
 # 8. Then it needs to copy in all files from current directory
 # 9. Then it needs to start container with command 'tini -- node ./bin/www'.
 # Lookup the CMD syntax if you need a reminder. 
-# In the end you should be using FROM, RUN, WORKDIR, COPY, EXPOSE, and CMD commands.
+
+# In the end you should be using FROM<p></p>, RUN, WORKDIR, COPY, EXPOSE, and CMD commands.
+
+
+FROM node:10.13.0-alpine
+RUN apk add --update tini
+WORKDIR /usr/src/app
+COPY package.json /usr/src/app/package.json
+RUN npm install
+RUN npm cache clean --force
+COPY . .
+EXPOSE 3000
+CMD tini -- node ./bin/www
+
+
