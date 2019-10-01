@@ -1,0 +1,1 @@
+mongorestore --host Cluster0-shard-0/cluster0-shard-00-00-hgivy.mongodb.net:27017,cluster0-shard-00-01-hgivy.mongodb.net:27017,cluster0-shard-00-02-hgivy.mongodb.net:27017 --ssl --username dbuser --password mtvghosts --authenticationDatabase admin --db greek-gods .
