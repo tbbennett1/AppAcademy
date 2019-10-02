@@ -10,7 +10,7 @@ const ProductSchema = new Schema({
   },
   category: {
     type: Schema.Types.ObjectId,
-    ref: "category"
+    ref: "categories"
   },
   description: {
     type: String,
@@ -23,8 +23,8 @@ const ProductSchema = new Schema({
 });
 
 ProductSchema.statics.updateProductCategory = (productId, categoryId) => {
-  const Product = mongoose.model("product");
-  const Category = mongoose.model("category");
+  const Product = mongoose.model("products");
+  const Category = mongoose.model("categories");
   return Product.findById(productId).then(product => {
     // if the product already had a category
     if (product.category) {

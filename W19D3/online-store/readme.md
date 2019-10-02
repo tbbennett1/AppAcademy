@@ -1,10 +1,16 @@
-"categories": [
 {
-    "id": "5d94d2433c3700cf6e0bd644",
-    "name": "Clothing"
-},
-{
-    "id": "5d94d99501a5fed65708c575",
-    "name": "Food"
+  "data": {
+    "categories": [
+      {
+        "id": "5d950df608d4c1f9997b6593",
+        "name": "Drink",
+        "products": []
+      },
+      {
+        "id": "5d950dfb08d4c1f9997b6594",
+        "name": "Food",
+        "products": []
+      }
+    ]
+  }
 }
-]
