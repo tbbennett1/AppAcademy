@@ -3,7 +3,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
-const keys = require("../../config/keys").secretOrKey;
+const keys = require("../../config/keys").secretOrPrivateKey;
 
 // here is our validator function
 const validateRegisterInput = require("../validation/register");
@@ -40,7 +40,7 @@ const register = async data => {
 
         user.save();
         // we'll create a token for the user
-        const token = jwt.sign({ id: user._id }, keys.secretOrKey);
+        const token = jwt.sign({ id: user._id }, keys);
 
         // then return our created token, set loggedIn to be true, null their password, and send the rest of the user
         return { token, loggedIn: true, ...user._doc, password: null };
@@ -94,7 +94,7 @@ const verifyUser = async data => {
     const { token } = data;
     // we decode the token using our secret password to get the
     // user's id
-    const decoded = jwt.verify(token, keys.secretOrKey);
+    const decoded = jwt.verify(token, keys);
     const { id } = decoded;
 
     // then we try to use the User with the id we just decoded
@@ -108,4 +108,4 @@ const verifyUser = async data => {
     return { loggedIn: false };
   }
 };
-module.exports = { register, login, logout};
+module.exports = { register, login, logout, verifyUser};

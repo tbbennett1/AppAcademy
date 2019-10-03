@@ -91,8 +91,15 @@ const mutation = new GraphQLObjectType({
         args: {
           token: { type: GraphQLString }
         },
-        resolve(_, args) {
-          return AuthService.verifyUser(args);
+        async resolve(_, { name, description, weight }, ctx) {
+          const validUser = await AuthService.verifyUser({ token: ctx.token });
+          // if our service returns true then our product is good to save!
+          // anything else and we'll throw an error
+          if (validUser.loggedIn) {
+            return validUser;
+          } else {
+            throw new Error('Sorry, you need to be logged in to create a product.');
+          }
         }
       }
   }
