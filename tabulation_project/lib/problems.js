@@ -51,7 +51,7 @@ function maxNonAdjacentSum(nums) {
   let table = new Array(nums.length).fill(0);
   table[0] = nums[0];
 
-  for(let i = 0; i < table.length; i++){ 
+  for(let i = 1; i < table.length; i++){ 
     let skipLeft = table[i - 2] === undefined ? 0 : table[i - 2];
     let includeNum = skipLeft + nums[i];
     table[i] = Math.max(includeNum, table[i - 1]);
@@ -74,7 +74,20 @@ function maxNonAdjacentSum(nums) {
 // minChange([1, 5, 10, 25], 15)    // => 2, because 10 + 5 = 15
 // minChange([1, 5, 10, 25], 100)   // => 4, because 25 + 25 + 25 + 25 = 100
 function minChange(coins, amount) {
+  let table = new Array(amount + 1).fill(Infinity);
+  table[0] = 0;
 
+  coins.forEach(val => {
+    for(let amt = 0; amt < table.length; amt++){
+      for(let qty = 0; qty * val <= amt; qty++){
+        let remainder = amt - qty * val;
+        let attempt = table[remainder] + qty;
+        if(attempt < table[amt]) table[amt] = attempt;
+      }
+    }
+  });
+
+  return table[table.length - 1];
 }
 
 
