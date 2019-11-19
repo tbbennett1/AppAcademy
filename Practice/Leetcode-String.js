@@ -49,3 +49,6 @@ var firstUniqChar = function (s) {
 };
 
 console.log(firstUniqChar("loveleetcode")) // 2
+
+
+
