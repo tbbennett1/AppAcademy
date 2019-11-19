@@ -21,3 +21,31 @@ var reverseString = function(s){
 // let s = ["H", "a", "n", "n", "a", "h"];
 // reverseString(s);
 // console.log(s);
+
+// First Unique Character
+// Given a string, find the first non - repeating character in it and return it's index. If it doesn't exist, return -1.
+// Examples:
+// s = "leetcode"
+// return 0.
+// s = "loveleetcode",
+// return 2.
+
+var firstUniqChar = function (s) {
+  let uniques = {};
+  for(let i = 0; i < s.length; i++){
+    if(uniques[s[i]]){
+      uniques[s[i]]++;
+    }else{
+      uniques[s[i]] = 1;
+    }
+  }
+  let idx = [];
+  Object.keys(uniques).forEach(key =>{
+    if(uniques[key] === 1){
+      idx.push(s.indexOf(key))
+    }
+  })
+  return idx.length > 0 ? idx[0] : -1;
+};
+
+console.log(firstUniqChar("loveleetcode")) // 2
