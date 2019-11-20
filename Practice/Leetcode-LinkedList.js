@@ -9,11 +9,12 @@ function ListNode(val) {
 }
 
 var reverseList = function (head) {
-  let prev = new ListNode(null);
+  let prev = null;
   let curr = head;
+  let next;
 
-  while(curr != null){
-    let next = new ListNode(curr.next);
+  while(curr){
+    next = curr.next;
     curr.next = prev;
     prev = curr;
     curr = next;
