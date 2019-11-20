@@ -23,16 +23,16 @@ var reverseList = function (head) {
   return prev;
 };
 
-let a = new ListNode(1);
-let b = new ListNode(2);
-let c = new ListNode(3);
-let d = new ListNode(4);
-let e = new ListNode(null);
+// let a = new ListNode(1);
+// let b = new ListNode(2);
+// let c = new ListNode(3);
+// let d = new ListNode(4);
+// let e = new ListNode(null);
 
-a.next = b;
-b.next = c;
-c.next = d;
-d.next = e;
+// a.next = b;
+// b.next = c;
+// c.next = d;
+// d.next = e;
 
 // console.log(reverseList(a));
 
