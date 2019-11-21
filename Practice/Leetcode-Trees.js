@@ -38,12 +38,19 @@ var maxDepth = function (root) {
 // Symmetric Tree
 // Given a binary tree, check whether it is a mirror of itself(ie, symmetric around its center).
 // For example, this binary tree[1, 2, 2, 3, 4, 4, 3] is symmetric:
-//     1
-//    / \
-//   2    2
+//      1
+//     / \
+//   2     2
 //  / \   / \
 // 3   4  4   3
 
 var isSymmetric = function (root) {
-  
+  return isMirror(root, root)
 };
+
+var isMirror = function (node1, node2){
+  if(node1 === null && node2 === null) return true;
+  if(node1 === null || node2 === null) return false;
+
+  return (node1.val === node2.val) && isMirror(node1.right, node2.left) && isMirror(node1.left, node2.right);
+}
