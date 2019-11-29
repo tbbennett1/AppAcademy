@@ -1,4 +1,4 @@
-class API::PokemonController < ApplicationController
+class Api::PokemonController < ApplicationController
   def index
     sleep 0.5
     @pokemon = Pokemon.all
